@@ -1,17 +1,41 @@
-name: GitHub actions demo
-run-name: Testing our Github actions
 
-on: [push]
+#-------------------------------------------------------------------------- GitHub actions demo ------------------------------------------
+# name: GitHub actions demo
+# run-name: Testing our Github actions
 
-env:
+# on: [push]
 
-  variable_example1: "This is the name"
-  git_var: ${{vars.def_var}}
+# env:
+
+#   variable_example1: "This is the name"
+#   git_var: ${{vars.def_var}}
   
 
+# jobs:
+#   basic_workflow:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - run: echo "Job basic_workflow is executing as part of new workflow $variable_example1 and  the defined var is $git_var"
+#       - run: echo "Job basic_workflow is executing as part of new workflow $variable_example1 and  the defined var is $git_var"
+
+
+
+#-------------------------------------------------------------------------- EVENT TRIGGER demo ------------------------------------------
+name: Event-based workflow execution
+
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  fork:
+    branches:
+      - main
+      
 jobs:
-  basic_workflow:
+  main_job:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Job basic_workflow is executing as part of new workflow $variable_example1 and  the defined var is $git_var"
-      - run: echo "Job basic_workflow is executing as part of new workflow $variable_example1 and  the defined var is $git_var"
+      - run: echo "TRIGGERED the main branch workflow - event based"
