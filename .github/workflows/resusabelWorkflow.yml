@@ -3,7 +3,7 @@
 name: Reusable WorkFlow
 
 on:
-  workflow_call:
+  workflows_call:
 
 jobs:
   steps:
