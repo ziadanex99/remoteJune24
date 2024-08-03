@@ -6,6 +6,7 @@ on: [push]
 env:
 
   variable_example1: "This is the name"
+  git_var: ${{vars.def_var}}
   
 
 jobs:
