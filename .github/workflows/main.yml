@@ -13,4 +13,4 @@ jobs:
   basic_workflow:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Job basic_workflow is executing as part of new workflow $variable_example1"
+      - run: echo "Job basic_workflow is executing as part of new workflow $variable_example1 and  the defined var is: $git_var"
