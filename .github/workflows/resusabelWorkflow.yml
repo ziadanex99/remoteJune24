@@ -9,4 +9,5 @@ jobs:
   steps:
     run-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - run: echo "My Reusable Job1 - executed"
