@@ -1,0 +1,12 @@
+#-------------------------------------------------------------------------- REUSABLE WORKFLOW demo ------------------------------------------
+
+name: Reusable WorkFlow
+
+on:
+  workflow_call:
+
+jobs:
+  steps:
+    run-on: ubuntu-latest
+    steps:
+      - run: echo "My Reusable Job1 - executed"
